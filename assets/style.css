@@ -1,0 +1,71 @@
+body{
+    scroll-behavior: smooth;
+    background-color: beige;
+}
+a{
+    text-decoration: none;
+}
+button:hover{
+    cursor: pointer;
+}
+.card{
+    border: 0px;
+    border-radius: 0px;
+}
+.card-header{
+    border: 0px ;
+    background-color: white;
+}
+
+
+/*serviece section*/
+
+.icons{
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: 30px auto;
+    border-radius: 50%;
+    font-size: 50px;
+    box-shadow: 0 0 0 10px #0078ff;
+    line-height: 2;
+}
+
+.Services-hover:hover .icons{
+    box-shadow: 0 0 0 10px #b4d4f9;
+    background-color: #0078ff;
+    color: white;
+    transition: all 500ms ease;
+}
+
+/*Contact Section*/
+
+.btn-primary{
+    border-radius: 30px;
+    padding:12px 20px 12px 20px ;
+
+}
+.form-control{
+    border-radius: 0;
+}
+.Contact-p{
+    word-spacing: 3px;
+}
+.icons-info{
+    color: black;
+    display: inline-block;
+    height: 50px;
+    line-height: 2.5;
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0 0 0 10px #0078ff;
+}
+a:hover .icons-info{
+    background-color: #0078ff;
+    color: white;
+    box-shadow: 0 0 0 10px  #b4d4f9;
+    transition: all 1s linear ease;
+}
