@@ -1,6 +1,7 @@
 body{
     scroll-behavior: smooth;
     background-color: beige;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -16,8 +17,114 @@ button:hover{
     border: 0px ;
     background-color: white;
 }
+/* Back to top button */
+#backtotop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    background-color: #0364d3;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#backtotop>i{
+    font-size: 25px;
+}
+#backtotop.show {
+    opacity: 1;
+    visibility: visible;
+}
+#backtotop:hover {
+    background-color: #0078ff;
+}
+/* Navbar */
+.navbar{
+    background-color: rgba(0,0,0,0.9)!important;
+}
+.nav-link,.navbar-brand,.nav-item>.btn{
+    color: white!important;
+}
+nav>button{
+    color: white;
+}
+/* .nav-item>btn:hover{
+    color: red;
+} */
+.fa-solid{
+    color: #ffffff;
+}
 
 
+/* Home section */
+#home{
+    /* background-repeat: no-repeat;*/
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: fixed;
+    position: relative;
+    height: 100svh;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    opacity: 0.9;
+}
+.homesection{
+    position: absolute;
+    text-align: center;
+    display: table;
+    width: inherit;
+    height: inherit;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.flex-display{
+    display: flex;
+    align-items: start;
+    align-content: center;
+}
+.home-uptitle{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+@media (min-width: 768px ) {
+    .home-uptitle{
+        font-size: 2.5rem;
+    }
+}
+.home-title {
+    font-weight: 600;
+    font-size: 3rem;
+}
+  
+@media (min-width: 768px) {
+    .home-title {
+      font-size: 4.5rem;
+    }
+}
+
+.home-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+  
+@media (min-width: 768px) {
+    .home-subtitle {
+      font-size: 2.5rem;
+    }
+}
 /*serviece section*/
 
 .icons{
@@ -36,6 +143,22 @@ button:hover{
     background-color: #0078ff;
     color: white;
     transition: all 500ms ease;
+}
+
+/* My Works */
+.img-head{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.pic{
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease 0s;       
+}
+.pichover:hover .pic{
+    transform: scale(1.2);   
 }
 
 /*Contact Section*/
@@ -68,4 +191,19 @@ a:hover .icons-info{
     color: white;
     box-shadow: 0 0 0 10px  #b4d4f9;
     transition: all 1s linear ease;
+}
+@media (max-width: 768px) {
+    .form-control {
+        margin-bottom: 15px;
+    }
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+
+/* Footer */
+
+.footer{
+    background-color: rgba(3, 139, 167, 0.975)!important;
 }
