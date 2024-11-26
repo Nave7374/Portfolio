@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Portfolio</title>
-
+    <!-- AOS CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
    <!-- need to add css file -->    
-    <link rel="stylesheet" href="./assets/style.css">
-
-
+    <link rel="stylesheet" href="./assets/CSS/style.css">
   </head>
   <body >
     
@@ -24,7 +23,7 @@
         <a class="navbar-brand" href="#">NavFolio</a>
       
         <!-- Button for the hamburger menu -->
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler " id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="fa-solid fa-bars"></i></span> <!-- This is the hamburger icon -->
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,7 +44,7 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-              <button class="btn">Download Resume</button>
+              <a href="./assets/pdf/Resume.pdf" class="download-btn btn" download><span class="btn-text">Download Resume</span></a>
             </li>
           </ul>
         </div>
@@ -54,11 +53,11 @@
 
     <main>
       <!-- home Section -->
-      <section class="container-fluid" id="home" style="background-image: url(/assets/home1.jpg);">
+      <section class="container-fluid bg-image" id="home" style="background-image: url(./assets/images/home1.jpg);">
         <div class="overlay"></div>
-        <div class="text-white homesection ">
+        <div class="text-white homesection" data-aos="fade-up" data-aos-delay="100">
           <div class="table-cell ">
-            <div class="container">
+            <div class="container p-0">
               <h2 class="home-uptitle">Hello There,</h2>
               <h1 class="home-title">I am Naveen </h1>
               <p class="home-subtitle"><span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
@@ -68,53 +67,84 @@
       </section>
 
       <!--About Section-->  
-      <section class="container-fluid about" id="about">
-        <div class="row">
-          <div class="col-md-3 m-auto">
-            <div>
-              <h3>Technical Skills </h3>
-            </div>
-            <div>
-              <p class="mt-2">HTML 90%</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" > </div>
+      <section id="about" data-aos="fade-up">
+        <div class="container-fluid about-mf">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="box-shadow">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-5">
+                        <div class="about-img">
+                          <img src="./assets/images/home1.jpg" class="img-fluid rounded" alt="About Image"/>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-5">
+                        <div class="about-info">
+                          <p><span class="title-s"><b>Name:</b></span><span> Naveen R</span></p>
+                          <p><span class="title-s"><b>Profile:</b></span><span> full-stack developer</span></p>
+                          <p><span class="title-s"><b>E-Mail:</b></span><span> nave7374@gmail.com</span></p>
+                          <p><span class="title-s"><b>Phone:</b></span><span> (+91)8072793987</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-title">
+                        <h4 class="mt-3">Technical Skills </h4>
+                      </div>
+                      <div class="skill-level">
+                        <span>HTML 90%</span>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"" > </div>
+                        </div>
+                        <span>CSS 75%</span>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" " > </div>
+                        </div>
+                        <span>JAVA 70%</span>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" " > </div>
+                        </div>
+                        <span>JAVA SCRIPT 70%</span>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" " > </div>
+                        </div>
+                        <span>SQL 90%</span>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" " > </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="about-me pt-4 pt-md-0">
+                      <div class="about-title">
+                        <h3 class="about-me-title">About Me </h3>
+                      </div>
+                      <div>
+                        <p><span class="ms-3">Hi !</span> I'm Naveen R, a software developer with a passion for building efficient, scalable, and user-centric applications. I specialize in  
+                          web development, mobile app development, backend engineering, full-stack development and thrive on solving complex challenges through code.
+                        </p> 
+                        <p><b>What I Do:</b></p>
+                        <p>
+                          Proficient in: Programming languages like Java , JavaScript , Sql.
+                          <!-- Frameworks & Tools: [e.g., React, Node.js, Django, Spring Boot, etc.]
+                          Development Focus: [e.g., building RESTful APIs, cloud-based solutions, microservices, or cross-platform apps]
+                          Experience with: [Mention additional tools, like Git, Docker, CI/CD pipelines, or databases like MySQL and MongoDB]-->
+                        </p>
+                        <p>
+                          I enjoy collaborating with teams to create software that makes a real impact. I believe in writing clean, maintainable code and constantly learning new technologies to stay ahead in a rapidly evolving industry. 
+                          Whether it’s optimizing performance, improving user experience, or automating processes, I am always looking for ways to add value through innovative solutions.
+                        </p>
+                        <p>
+                        When I’m not coding, you’ll likely find me playing chess, Listening Musics or Watching Cricket.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p class="mt-2">CSS 75%</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" > </div>
-              </div>
-              <p class="mt-2">JAVA 70%</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" > </div>
-              </div>
-              <p class="mt-2">JAVA SCRIPT 70%</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" > </div>
-              </div>
-              <p class="mt-2">SQL 90%</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-info w-79" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" > </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 m-auto">
-            <div>
-              <h3>About Me </h3>
-            </div>
-            <div>
-              <p><span class="ms-3">Hi !</span> I'm Naveen R, a software developer with a passion for building efficient, scalable, and user-centric applications. I specialize in  
-                web development, mobile app development, backend engineering, full-stack development and thrive on solving complex challenges through code. <br>
-                <b>What I Do:</b> <br>
-                Proficient in: Programming languages like Java , JavaScript , Sql.
-                <!-- Frameworks & Tools: [e.g., React, Node.js, Django, Spring Boot, etc.]
-                Development Focus: [e.g., building RESTful APIs, cloud-based solutions, microservices, or cross-platform apps]
-                Experience with: [Mention additional tools, like Git, Docker, CI/CD pipelines, or databases like MySQL and MongoDB]-->
-                <br>
-                I enjoy collaborating with teams to create software that makes a real impact. I believe in writing clean, maintainable code and constantly learning new technologies to stay ahead in a rapidly evolving industry. 
-                Whether it’s optimizing performance, improving user experience, or automating processes, I am always looking for ways to add value through innovative solutions.
-                <br>
-                When I’m not coding, you’ll likely find me playing chess, Listening Musics or Watching Cricket.
-              </p>
             </div>
           </div>
         </div>
@@ -122,64 +152,71 @@
       
       
       <!-- Serviece Section -->
-      <section class="container-fluid" id="services">
-        <div class="row">
-          <div class="col-md mt-5 text-center ">
-            <h1 class="title">SERVIECES</h1>
-          </div>
-        </div>
-        <div class="row mt-3 d-flex justify-content-center">
-          <div class="col-md-3 ">
-            <div class="card Services-hover">
-              <div class="card-header text-center">
-                <span class="icons"><i class="bi bi-briefcase"></i></span>
-                <h4 class="mt-4">WEB DESIGN</h4>
-              </div>
-              <div class="card-body">
-                <p>
-                  Build dynamic, feature-rich web Sites customized to specific needs.
-                  Include custom themes, plugins, and extensions.
-                  Web design focuses on creating websites that are easy, intuitive, and enjoyable for users.
-                  A coherent design system across pages makes the website feel unified and professional.Consistency in design elements,
-                  This consistency builds trust and familiarity, enhancing the overall user experience.
-                  Subtle animations can guide user attention and improve usability, while excessive animations can slow down a site.
-                  Interactive elements make websites feel dynamic.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 ">
-            <div class="card Services-hover">
-              <div class="card-header text-center">
-                <span class="icons"><i class="bi bi-card-checklist"></i></span>
-                <h4 class="mt-4">WEB DEVELOPMENT</h4>
-              </div>
-              <div class="card-body">
-                <p>
-                  Offer full-cycle custom website development tailored to the client's brand, goals, and audience.
-                  Front-end development focuses on the client side,
-                  Back-end development deals with the server side, handling data processing, storage, and application logic.
-                  Full-stack development combines front-end and back-end skills, enabling developers to work on all layers of a website or app.
-                  Databases handling tasks like user information, product listings, and content management.
-                  Performance is essential for a smooth experience and includes minimizing load times, reducing server response time.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card Services-hover">
-              <div class="card-header text-center">
-                <span class="icons"><i class="bi bi-binoculars"></i></span>
-                <h4 class="mt-4">RESPONSIVE DESIGN</h4>
-              </div>
-              <div class="card-body">
-                <p>
-                  Provide responsive web design services to ensure websites look and function well on any device.
-                  Responsive design ensures websites work well on any device by adjusting layouts and components for different screen sizes.
-                  Responsive web development is essential for accessibility and enhances the user experience across devices.
-                  Adaptive design, a related concept, creates different layouts for various screen sizes, providing an optimized experience.
-                  Both approaches are crucial for creating mobile-friendly websites, which are essential in today’s multi-device world.
-                </p>
+      <section id="services" class="services-mf" data-aos="fade-up">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="box-modal">
+                <div class="section-title text-center">
+                  <h1 class="title"> SERVICES</h1>
+                  <p class="section-subtitle">Our services are designed to help you achieve your goals</p>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="Services-hover">
+                      <div class="services-icon text-center">
+                        <span class="icons"><i class="bi bi-briefcase"></i></span>
+                        <h4 class="mt-4">WEB DESIGN</h4>
+                      </div>
+                      <div class="service-body">
+                        <p>
+                          Build dynamic, feature-rich web Sites customized to specific needs.
+                          Include custom themes, plugins, and extensions.
+                          Web design focuses on creating websites that are easy, intuitive, and enjoyable for users.
+                          A coherent design system across pages makes the website feel unified and professional.Consistency in design elements,
+                          This consistency builds trust and familiarity, enhancing the overall user experience.
+                          Subtle animations can guide user attention and improve usability, while excessive animations can slow down a site.
+                          Interactive elements make websites feel dynamic.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="Services-hover">
+                      <div class="services-icon text-center">
+                        <span class="icons"><i class="bi bi-card-checklist"></i></span>
+                        <h4 class="mt-4">WEB DEVELOPMENT</h4>
+                      </div>
+                      <div class="service-body">
+                        <p>
+                          Offer full-cycle custom website development tailored to the client's brand, goals, and audience.
+                          Front-end development focuses on the client side,
+                          Back-end development deals with the server side, handling data processing, storage, and application logic.
+                          Full-stack development combines front-end and back-end skills, enabling developers to work on all layers of a website or app.
+                          Databases handling tasks like user information, product listings, and content management.
+                          Performance is essential for a smooth experience and includes minimizing load times, reducing server response time.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="Services-hover">
+                      <div class="services-icon text-center">
+                        <span class="icons"><i class="bi bi-binoculars"></i></span>
+                        <h4 class="mt-4">RESPONSIVE DESIGN</h4>
+                      </div>
+                      <div class="service-body">
+                        <p>
+                          Provide responsive web design services to ensure websites look and function well on any device.
+                          Responsive design ensures websites work well on any device by adjusting layouts and components for different screen sizes.
+                          Responsive web development is essential for accessibility and enhances the user experience across devices.
+                          Adaptive design, creates different layouts for various screen sizes, providing an optimized experience.
+                          Both approaches are crucial for creating mobile-friendly websites, which are essential in today’s multi-device world.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -188,142 +225,128 @@
       
 
       <!-- MY Works Section -->
-      <section class="container-fluid" id="myworks">
-        <div class="row">
-          <div class="col-md mt-5 text-center ">
-            <h1 class="title">MY WORKS</h1>
-          </div>
-        </div>
-        <div class="row mt-3 d-flex justify-content-center">
-          <div class="col-md-3">
-            <div class="card pichover">
-              <div class="card-header img-head">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRICXEP7ejyxIKQP3yM-iSuMrUzm0HlgrjFqw&s" alt="Image Not Found" class="img-fluid pic" >
-              </div>
-              <div class="card-body">
-                <h4>Transport Management System <h1 class="mt-0"><a href="Projects.html"><i class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
-                <span class="text-primary">Web Design </span>
-                
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card pichover">
-              <div class="card-header img-head">
-                <img src="./assets/EFPOF1.jpeg" alt="Image Not Found" class="img-fluid pic" >
-              </div>
-              <div class="card-body">
-                <h4>Reducing the Environmental Footprint of Food<h1 class="mt-0"><a href="#g"><i class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
-                <span class="text-primary">Web Design </span>
-                
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card pichover">
-              <div class="card-header img-head">
-                <img src="https://media.istockphoto.com/id/1144604134/photo/malware-detected-warning-screen.jpg?s=612x612&w=0&k=20&c=zjFSeXUT6AtIteuoK_ikKDKqsSanSljJVKMQI_S3Fqk=" alt="Image Not Found" class="img-fluid pic" >
-              </div>
-              <div class="card-body">
-                <h4>Malware Detection and Analysis<h1 class="mt-0"><a href="#g"><i class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
-                <span class="text-primary">Software Design </span>
+      <section id="myworks" class="work-sec" data-aos="fade-up">
+        <div class="container-fluid work-margin">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="box-modal">
+                <div class="my-work-title text-center">
+                  <h1 class="title">MY WORKS</h1>
+                  <p class="sub-title">Check out some of my projects</p>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-3">
+                    <div class="pic-hover">
+                      <div class="img-head">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRICXEP7ejyxIKQP3yM-iSuMrUzm0HlgrjFqw&s" alt="Image Not Found" class="img-fluid pic" >
+                      </div>
+                      <div class="work-body">
+                        <h4>Transport Management System <h1 class="mt-0"><a href="Projects.html"><i class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
+                        <span class="text-primary">Web Design </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="pic-hover">
+                      <div class="img-head">
+                        <img src="./assets/images/EFPOF1.jpeg" alt="Image Not Found" class="img-fluid pic" >
+                      </div>
+                      <div class="work-body">
+                        <h4>Reducing the Environmental Footprint of Food<h1 class="mt-0"><a href="#g"><i class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
+                        <span class="text-primary">Web Design </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="pic-hover">
+                      <div class="img-head">
+                        <img src="https://media.istockphoto.com/id/1144604134/photo/malware-detected-warning-screen.jpg?s=612x612&w=0&k=20&c=zjFSeXUT6AtIteuoK_ikKDKqsSanSljJVKMQI_S3Fqk=" alt="Image Not Found" class="img-fluid pic" >
+                      </div>
+                      <div class="work-body">
+                        <h4>Malicious mining Code detection Using Machine Learning Algorithms <h1 class="mt-0"><a href="#g"><i class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
+                        <span class="text-primary">Software Design </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-
-
-
-
-
-      <!--get in touch section-->
-        <!-- <div class="container-fluid" id="myworks">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-header text-center">
-                  <h3>Malware Detection in java using machine learning </h3>
-                </div>
-                <div class="card-body text-center">
-                  <span class="h3">Objective:</span> Develop a malware detection system in Java that leverages machine learning to identify malicious files and activities with high accuracy. <br>
-                  <span class="h3">Goal:</span> Detect zero-day malware and minimize false positives while ensuring optimal system performance.
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-header">
-                </div>
-                <div class="card-body">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        
-        
+      
         <!-- Contact section -->
-        <section class="container-fluid" id="contact">
-          <div class="row">
+      <section class="base-mf bg-image" id="contact" style="background-image:url(https://images.pexels.com/photos/373893/pexels-photo-373893.jpeg?auto=compress&cs=tinysrgb&w=600);">
+        <div class="overlay-mf"></div>
+        <div class="container-fluid">
+          <div class="row" data-aos="fade-up">
             <div class="col-md-12 ">
-              <div class="row d-flex justify-content-center">
-                <div class="col-md-5">
-                  <h3>Send Message</h3>
-                  <form action="">
-                    <div class="mb-3">
-                      <input type="text" class="form-control" placeholder="Your Name" required>
+              <div class="contact-box-modal">
+                <div id="contact" class="contact-sec">
+                  <div class="row">
+                    <div class="col-md-7 send-msg">
+                      <h3>Send Message</h3>
+                      <form action="" class="submit-form">
+                        <div class="mb-3">
+                          <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                          <input type="email" class="form-control" placeholder="Your E-Mail" required>
+                        </div>
+                        <div class="mb-3">
+                          <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                          <textarea cols="40" rows="5" class="form-control" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="text-center mt-5">
+                          <span class="text-success d-block" id="display-msg"></span>
+                          <input type="submit" class="btn btn-primary mt-3" value="Send Message">
+                        </div>
+                      </form>
                     </div>
-                    <div class="mb-3">
-                      <input type="email" class="form-control" placeholder="Your E-Mail" required>
+                    <div class="col-md-5">
+                      <h3>Get In Touch</h3>
+                      <div class="get-in-touch">
+                        <p class="Contact-p">I’d love to hear from you! Whether you have a question, want to collaborate, feel free to reach out.</p>
+                      </div>
+                      <div class="contact-icons">
+                        <p><i class="bi bi-geo-alt"></i> Tamil Nadu,India</p>
+                        <p><i class="bi bi-phone"></i> +91 8072793987</p>
+                        <p> <i class="bi bi-envelope me-1"></i> nave7374@gmail.com</p>
+                      </div>
+                      <div>
+                        <a href="https://www.linkedin.com/in/naveen-r-475890295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><span class="icons-info"><i class="bi bi-linkedin"></i></span></a>
+                        <a href="https://x.com/Naveen7374R?t=xvWWj78SbiLXBJSf0tfJxA&s=09" target="_blank"><span class="icons-info"><i class="bi bi-twitter"></i></span></a>
+                        <a href="https://www.instagram.com/r_naveen_45/profilecard/?igsh=MWxzZjhiODV2eG8wcA==" target="_blank"><span class="icons-info"><i class="bi bi-instagram"></i></span></a>
+                        <a href="#" target="_blank"><span class="icons-info"><i class="bi bi-facebook"></i></span></a>
+                      </div>
                     </div>
-                    <div class="mb-3">
-                      <input type="text" class="form-control" placeholder="Subject" required>
-                    </div>
-                    <div class="mb-3">
-                      <textarea cols="40" rows="5" class="form-control" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="text-center mt-5">
-                      <span class="text-success d-block" id="display-msg"></span>
-                      <input type="submit" class="btn btn-primary mt-3" value="Send Message">
-                    </div>
-                  </form>
-                </div>
-                <div class="col-md-4">
-                  <h3>Get In Touch</h3>
-                  <div>
-                  <p class="Contact-p">I’d love to hear from you! Whether you have a question, want to collaborate, feel free to reach out.</p>
-                  </div>
-                  <div class="contact-icons">
-                    <p><i class="bi bi-geo-alt"></i> Tamil Nadu,India</p>
-                    <p><i class="bi bi-phone"></i> +91 8072793987</p>
-                    <p> <i class="bi bi-envelope me-1"></i> nave7374@gmail.com</p>
-                  </div>
-                  <div>
-                    <a href="https://www.linkedin.com/in/naveen-r-475890295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><span class="icons-info"><i class="bi bi-linkedin"></i></span></a>
-                    <a href="https://x.com/Naveen7374R?t=xvWWj78SbiLXBJSf0tfJxA&s=09" target="_blank"><span class="icons-info"><i class="bi bi-twitter"></i></span></a>
-                    <a href="https://www.instagram.com/r_naveen_45/profilecard/?igsh=MWxzZjhiODV2eG8wcA==" target="_blank"><span class="icons-info"><i class="bi bi-instagram"></i></span></a>
-                    <a href="https://www.facebook.com/r.naveen.547?mibextid=rS40aB7S9Ucbxw6v" target="_blank"><span class="icons-info"><i class="bi bi-facebook"></i></span></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <button id="backtotop"><i class="bi bi-arrow-up-short" onclick="ScrolltoTop()"></i></button>
+        </div>
+      </section>
+      
     </main>
-    <footer class="container-fluid text-white text-center mt-5 p-4  footer">
+    <footer class="container-fluid text-white text-center p-4  footer">
       <p class="m-0">	&#169; Copyright NavFolio. All Rights Reserved <br> Designed By <a href="#about" class="link text-white text-none">Naveen</a> </p>
+      <!-- <p > <a href="https://bootstrapmade.com/demo/DevFolio/" target="_blank" class="link text-white text-none">Target Web</a></p> -->
     </footer>   
-
+    <button id="backtotop"><i class="bi bi-arrow-up-short" onclick="ScrolltoTop()"></i></button>
 
     <!-- Script Code -->
-    <script src="/assets/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Bootstrap JS and Popper.js (for the hamburger functionality) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-
+    <!-- fadding up when the web page is scrolled -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <!-- Mian js -->
+    <script src="./assets/JS/main.js"></script>
+  
   </body>
 </html> 
