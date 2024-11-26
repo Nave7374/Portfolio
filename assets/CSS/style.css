@@ -37,11 +37,17 @@ button:hover{
       background-attachment: scroll;
     }
   }
-
-section{
-    width: 100%;
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+    .navbar-collapse {
+        overflow-x: hidden; /* Handle overflow if needed */
+    }
 }
-
+img {
+    max-width: 100%;
+}
 
 /* Back to top button */
 #backtotop{
@@ -106,7 +112,7 @@ nav>button{
     /* background-position: center; */
     background-attachment: fixed;
     position: relative;
-    height: 100svh;
+    height: 100dvh;
 }
 
 .overlay{

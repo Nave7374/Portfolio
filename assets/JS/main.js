@@ -33,8 +33,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     new Typed('.typed', {
       strings: items,       // Items to type
-      typeSpeed: 50,        // Typing speed
-      backSpeed: 30,        // Backspacing speed
+      typeSpeed: 100,        // Typing speed
+      backSpeed: 60,        // Backspacing speed
       loop: true            // Loop the animation
     });
   });
