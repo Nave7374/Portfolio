@@ -27,6 +27,11 @@ button:hover{
     background-position: center;
     background-attachment: fixed;
 }
+@media (min-width:767.20px) {
+    body{
+        overflow-x: hidden;
+    }
+}
 @media (max-width: 1024px) {
     .bg-image {
       background-attachment: scroll;
