@@ -37,6 +37,12 @@ button:hover{
       background-attachment: scroll;
     }
   }
+
+section{
+    width: 100%;
+}
+
+
 /* Back to top button */
 #backtotop{
     position: fixed;
@@ -341,8 +347,13 @@ a:hover .icons-info{
     .btn-primary {
         width: 50%;
     }
-    .contact-sec .contact-box-modal{
-           margin: 15px;
+    .contact-box-modal{
+           margin: 5px;
+           padding: 10px;
+    }
+    .contact-sec{
+        padding: 50px;
+        border-radius: 10px;
     }
     .send-msg{
         margin-bottom: 40px;
