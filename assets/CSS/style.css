@@ -346,7 +346,7 @@ a:hover .icons-info{
     }
     .btn-primary {
         width: 50%;
-        
+        padding: auto;
     }
     .contact-box-modal{
            margin: 5px;
