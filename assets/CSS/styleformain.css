@@ -88,15 +88,6 @@ button:hover{
 nav>button{
     color: white;
 }
-.Hi:hover{
-    background-color: white;
-    box-shadow: 0 0 10px white;
-    border-radius: 15px;
-    width:max-content;
-}
-.Hi:hover .nav-link{
-    color: black!important;
-}
 .fa-solid{
     color: #ffffff;
 }
@@ -107,6 +98,18 @@ nav>button{
 .download-btn:hover .btn-text{
     color: black;
 }
+@media (min-width:800px) {
+.Hi:hover{
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    border-radius: 15px;
+    width:max-content;
+}
+.Hi:hover .nav-link{
+    color: black!important;
+}
+}
+
 
 /* Home section */
 #home{
@@ -368,7 +371,7 @@ a:hover .icons-info{
            padding: 10px;
     }
     .contact-sec{
-        padding: 50px;
+        padding: 30px!important;
         border-radius: 10px;
     }
     .send-msg{
