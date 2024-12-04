@@ -27,26 +27,24 @@ button:hover{
     background-position: center;
     background-attachment: fixed;
 }
-@media (max-width:767.20px) {
-    body{
-        overflow-x: hidden;
-    }
-}
 @media (max-width: 1024px) {
     .bg-image {
       background-attachment: scroll;
     }
   }
-@media only screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden; /* Prevent horizontal scroll */
-    }
-    .navbar-collapse {
-        overflow-x: hidden; /* Handle overflow if needed */
+@media (max-width:767.20px) {
+    body{
+        overflow-x: hidden;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        height: 100%;
     }
 }
-img {
-    max-width: 100%;
+.title-ul{
+    text-decoration-color: #0062d3;
+    text-decoration-line: underline;
+    text-underline-offset: 8px;
 }
 
 /* Back to top button */
@@ -74,6 +72,8 @@ img {
 #backtotop:hover {
     background-color: #0078ff;
 }
+
+
 /* Navbar */
 .navbar-brand{
     padding-left: 20px;
@@ -82,18 +82,21 @@ img {
 .navbar{
     background-color: rgba(0,0,0,0.9)!important;
 }
-.nav-link,.navbar-brand,.nav-item>.btn{
-    color: white!important;
-}
 .nav-item{
-    padding-right: 10px;
+    margin-right: 10px;
 }
 nav>button{
     color: white;
 }
-/* .nav-item>btn:hover{
-    color: red;
-} */
+.Hi:hover{
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    border-radius: 15px;
+    width:max-content;
+}
+.Hi:hover .nav-link{
+    color: black!important;
+}
 .fa-solid{
     color: #ffffff;
 }
@@ -158,6 +161,9 @@ nav>button{
     .home-title {
       font-size: 4.5rem;
     }
+    #home{
+        background-attachment: fixed;
+    }
 }
 
 .home-subtitle {
@@ -201,6 +207,9 @@ nav>button{
 @media (max-width: 767.20px) {
     .about-mf .box-shadow{
         margin: 15px;     
+    }
+    .box-shadow{
+        padding: 30px;
     }
 }
 /*serviece section*/
