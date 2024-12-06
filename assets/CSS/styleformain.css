@@ -1,7 +1,10 @@
+html,body{
+    overflow-x: hidden;
+}
+
 body{
     scroll-behavior: smooth;
     background-color: beige;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -27,11 +30,11 @@ button:hover{
     background-position: center;
     background-attachment: fixed;
 }
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     html, body {
         overflow-x: hidden;
     }
-}
+} */
 @media (max-width: 1024px) {
     .bg-image {
       background-attachment: scroll;
