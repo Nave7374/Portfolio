@@ -23,7 +23,7 @@ button:hover{
 }
 .bg-image{
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
@@ -37,16 +37,15 @@ button:hover{
       background-attachment: scroll;
     }
   }
-/* @media (max-width:767.20px) { 
-     body{
+@media (max-width:767.20px) {
+    body{
         overflow-x: hidden;
         margin: 0;
         width: 100%;
         padding: 0;
         height: 100%;
     }
-}*/
-
+}
 .title-ul{
     text-decoration-color: #0062d3;
     text-decoration-line: underline;
