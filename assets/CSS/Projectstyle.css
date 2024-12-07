@@ -1,3 +1,6 @@
+html{
+    overflow-x: hidden;
+}
 body{
     margin: 0;
     width: 100%;
@@ -29,4 +32,9 @@ a{
 }
 .carousel:hover .carousel-control-prev-icon{
     background-color: #000000;
+}
+@media (max-width:767.20px){
+    .content{
+        margin-top:50px;
+    }
 }

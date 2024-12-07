@@ -85,3 +85,24 @@ skillsAnimation.forEach((item) => {
    }
  });
 });
+
+emailjs.init("mSH3ZqAm7O_ltQmAP");
+
+function SendEmail(e){
+  // e.preventDefault();
+  let proms={
+    name : document.getElementById("name").value,
+    email : document.getElementById("email").value,
+    subject : document.getElementById("Subject").value,
+    message : document.getElementById("message").value
+  }
+
+  emailjs.send("service_ea05fk3","template_agcr2xr",proms).then(()=> {
+    alert("Send Email")
+    // document.getElementById("submit-form").reset();
+  }).catch((error)=>{
+    console.error("Error sending email:", error);
+    alert("Failed to send email. Please check your connection or try again later.");
+    });
+}
+//AE1C39737F74B87492CDEC7124CE8677A38B

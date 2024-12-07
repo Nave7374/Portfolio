@@ -1,7 +1,10 @@
 html,body{
     overflow-x: hidden;
 }
-
+link[rel="icon"] {
+    border-radius: 50%!important;
+    overflow: hidden!important;
+}
 body{
     scroll-behavior: smooth;
     background-color: beige;
@@ -277,12 +280,13 @@ nav>button{
     background-color: #ffffff;
     padding: 30px;
     border-radius: 20px;
+    height: 100%;
 }
 .pic-hover:hover .pic{
     transform: scale(1.2);   
 }
 @media (max-width:767.20px){
-    .pic-hover{
+    .work-sec-margin{
         margin-bottom: 30px;
     }
     .work-sec .box-modal{

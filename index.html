@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="https://cdn.vectorstock.com/i/1000v/02/36/nf-logo-with-circle-rounded-negative-space-design-vector-29230236.avif">
-
+    <link rel="icon" href="./assets/images/icon main1.jpg" >
     <!-- Required meta tags -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -239,34 +238,34 @@
                   <p class="sub-title">Check out some of my projects</p>
                 </div>
                 <div class="row mt-3">
-                  <div class="col-md-3">
+                  <div class="col-md work-sec-margin">
                     <div class="pic-hover">
                       <div class="img-head">
                         <img src="./assets/images/tmsbase.jpg" alt="Image Not Found" class="img-fluid pic" >
                       </div>
-                      <div class="work-body">
+                      <div class="work-body mt-2">
                         <h4>Transport Management System <h1 class="mt-0"><a id="tms-btn" target="_blank" href="Projects.html?project=0"><i  class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
                         <span class="text-primary">Web Design </span>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md work-sec-margin">
                     <div class="pic-hover">
                       <div class="img-head">
                         <img src="./assets/images/nmbase.jpg" alt="Image Not Found" class="img-fluid pic" >
                       </div>
-                      <div class="work-body">
+                      <div class="work-body mt-2">
                         <h4>Reducing the Environmental Footprint of Food<h1 class="mt-0"><a target="_blank" href="Projects.html?project=1"><i id="nm-btn" class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
                         <span class="text-primary">Web Design </span>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-md work-sec-margin">
                     <div class="pic-hover">
                       <div class="img-head">
                         <img src="./assets/images/malware bas.jpg" alt="Image Not Found" class="img-fluid pic" >
                       </div>
-                      <div class="work-body">
+                      <div class="work-body mt-2">
                         <h4>Malicious mining Code detection Using Machine Learning Algorithms <h1 class="mt-0"><a target="_blank" href="Projects.html?project=2"><i id="md-btn" class="bi bi-plus-circle float-end text-primary"></i></a></h1></h4>
                         <span class="text-primary">Software Design </span>
                       </div>
@@ -293,23 +292,23 @@
                   <div class="row">
                     <div class="col-md-7 send-msg">
                       <h3 class="title-ul">Send Message</h3>
-                      <form action="" class="submit-form">
+                      <form class="submit-form">
                         <div class="mb-3">
-                          <input type="text" class="form-control" placeholder="Your Name" required>
+                          <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
-                          <input type="email" class="form-control" placeholder="Your E-Mail" required>
+                          <input type="email"id="email" name="email"  class="form-control" placeholder="Your E-Mail" required>
                         </div>
                         <div class="mb-3">
-                          <input type="text" class="form-control" placeholder="Subject" required>
+                          <input type="text" id="Subject" name="Subject" class="form-control" placeholder="Subject" required>
                         </div>
                         <div class="mb-3">
-                          <textarea cols="40" rows="5" class="form-control" placeholder="Message" required></textarea>
+                          <textarea cols="40" rows="5" class="form-control" id="message" name="message" placeholder="Message" required></textarea>
                         </div>
                         <div class="text-center mt-5">
                           <span class="text-success d-block" id="display-msg"></span>
                           <!-- <button type="submit" class="btn btn-primary mt-3">Send message</button> -->
-                          <button type="submit" class="btn btn-primary mt-3">Send message</button>
+                          <button onclick="SendEmail()" type="submit" class="btn btn-primary mt-3">Send message</button>
                           <!-- <input type="submit" class="btn btn-primary mt-3" value="Send Message"> -->
                         </div>
                       </form>
@@ -354,7 +353,15 @@
     <!-- fadding up when the web page is scrolled -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <!-- js for cotact -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        
+      })();
+    </script>
     <!-- Mian js -->
     <script src="./assets/JS/main.js"></script>
+    
   </body>
 </html> 
