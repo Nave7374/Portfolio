@@ -86,23 +86,48 @@ skillsAnimation.forEach((item) => {
  });
 });
 
-emailjs.init("mSH3ZqAm7O_ltQmAP");
+let displaymsg=document.getElementById('display-msg');
+let errmsg=document.getElementById('err-msg');
 
-function SendEmail(e){
-  // e.preventDefault();
-  let proms={
-    name : document.getElementById("name").value,
-    email : document.getElementById("email").value,
-    subject : document.getElementById("Subject").value,
-    message : document.getElementById("message").value
+function SendEmail(event){
+
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let mail = document.getElementById("email").value;
+  let subject = document.getElementById("Subject").value;
+  let message = document.getElementById("message").value;
+  
+  if (!name || !mail || !subject || !message) {
+    alert("Please fill out all fields.");
+    return;
   }
 
-  emailjs.send("service_ea05fk3","template_agcr2xr",proms).then(()=> {
-    alert("Send Email")
-    // document.getElementById("submit-form").reset();
-  }).catch((error)=>{
-    console.error("Error sending email:", error);
-    alert("Failed to send email. Please check your connection or try again later.");
+
+  let proms={
+    from_subject:subject,
+    from_name:name,
+    from_message:message,
+    from_email:mail
+  };
+
+  emailjs.send("service_0va32pi","template_agcr2xr",proms).then(function(response) {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("Subject").value = "";
+      document.getElementById("message").value = "";
+
+      // alert(response);
+      displaymsg.textContent="Message Sent Succesfullly";
+      errmsg.textContent="";
+      console.log(response);
+      // document.getElementById("submit-form").reset();
+    }).catch((error)=>{
+      console.error("Error sending email:", error);
+      // alert("Failed to send email. Please check your connection or try again later.");
+      displaymsg.textContent="";
+      errmsg.textContent="Something went wrong Please try again Later!";
+      // alert(error);
     });
 }
 //AE1C39737F74B87492CDEC7124CE8677A38B

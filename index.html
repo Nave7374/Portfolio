@@ -15,6 +15,15 @@
    <!-- need to add css file -->    
     <link rel="stylesheet" href="./assets/CSS/styleformain.css">
     
+    <!-- emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("mSH3ZqAm7O_ltQmAP");
+      })();
+    </script>
+
+
   </head>
   <body >
     
@@ -294,22 +303,21 @@
                       <h3 class="title-ul">Send Message</h3>
                       <form class="submit-form">
                         <div class="mb-3">
-                          <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                          <input type="text" id="name" name="name" class="form-control" value="" placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
-                          <input type="email"id="email" name="email"  class="form-control" placeholder="Your E-Mail" required>
+                          <input type="email"id="email" name="email"  class="form-control" value="" placeholder="Your E-Mail" required>
                         </div>
                         <div class="mb-3">
-                          <input type="text" id="Subject" name="Subject" class="form-control" placeholder="Subject" required>
+                          <input type="text" id="Subject" name="Subject" class="form-control" value="" placeholder="Subject" required>
                         </div>
                         <div class="mb-3">
-                          <textarea cols="40" rows="5" class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+                          <textarea cols="40" rows="5" class="form-control" id="message" name="message" value="" placeholder="Message" required></textarea>
                         </div>
                         <div class="text-center mt-5">
                           <span class="text-success d-block" id="display-msg"></span>
-                          <!-- <button type="submit" class="btn btn-primary mt-3">Send message</button> -->
-                          <button onclick="SendEmail()" type="submit" class="btn btn-primary mt-3">Send message</button>
-                          <!-- <input type="submit" class="btn btn-primary mt-3" value="Send Message"> -->
+                          <span class="text-danger d-block" id="err-msg"></span>
+                          <button onclick="SendEmail(event)" type="submit" class="btn btn-primary mt-3">Send message</button>
                         </div>
                       </form>
                     </div>
@@ -353,13 +361,7 @@
     <!-- fadding up when the web page is scrolled -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-    <!-- js for cotact -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-        
-      })();
-    </script>
+
     <!-- Mian js -->
     <script src="./assets/JS/main.js"></script>
     
