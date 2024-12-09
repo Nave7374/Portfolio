@@ -86,7 +86,12 @@ button:hover{
 
 
 /* Navbar */
+.nav-folio{
+    color: rgba(0, 234, 255, 0.858);
+    font-size: x-large;
+}
 .navbar-brand{
+    font-family:'Courier New', Courier, monospace;
     padding-left: 20px;
     /* font-size: 20px; */
 }
