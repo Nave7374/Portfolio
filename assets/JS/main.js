@@ -86,6 +86,9 @@ skillsAnimation.forEach((item) => {
  });
 });
 
+
+// Contact Form E-mail Send Verification
+
 let displaymsg=document.getElementById('display-msg');
 let errmsg=document.getElementById('err-msg');
 

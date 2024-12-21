@@ -35,6 +35,9 @@ a{
 }
 @media (max-width:767.20px){
     .content{
-        margin-top:50px;
+        margin-top :50px;
+    }
+    .project-content{
+        margin:15px;
     }
 }
