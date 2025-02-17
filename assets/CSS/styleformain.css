@@ -91,7 +91,7 @@ button:hover{
     font-size: x-large;
 }
 .navbar-brand{
-    font-family:'Courier New', Courier, monospace;
+    /* font-family:'Courier New', Courier, monospace; */
     padding-left: 20px;
     /* font-size: 20px; */
 }
@@ -197,6 +197,11 @@ nav>button{
 }
 
 /* About section */
+.about-img-tag{
+    height: 180px!important;
+    width: 150px!important;
+    border-radius: 10%!important;
+}
 
 .box-shadow{
     margin: 30px 50px 30px 90px;
